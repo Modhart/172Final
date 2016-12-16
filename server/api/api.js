@@ -8,5 +8,9 @@ router.get("/",function(req,res){
     res.json({"error" : false,"message" : "Hello World"});
 });
 router.use('/users', require('./user/userRoutes'));
+
+//Add the post and category routes
+router.use('/posts', require('./post/postRoutes'));
+router.use('/categories', require('./CATEGORY/categoryRoutes'));
  
 module.exports = router;
